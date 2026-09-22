@@ -1,7 +1,9 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: '/api',
+    baseURL: import.meta.env.DEV 
+    ? '/api' 
+    : 'https://car-wash-api-bh2k.onrender.com/api',
   headers: { 'Content-Type': 'application/json' },
 });
 
