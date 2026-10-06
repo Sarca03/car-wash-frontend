@@ -85,17 +85,17 @@ export default function Clients() {
   if (loading) return <Loading />;
 
   return (
-    <div className="p-8">
-      <div className="flex justify-between items-center mb-6">
+    <div className="p-4 md:p-6 lg:p-8">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
         <div>
-          <h1 className="text-3xl font-bold text-white">Klijenti</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-white">Klijenti</h1>
           <p className="text-slate-400 mt-1">
             Ukupno: <span className="text-white font-semibold">{filtered.length}</span> od {clients.length}
           </p>
         </div>
         <button
           onClick={handleOpenAdd}
-          className="bg-blue-600 hover:bg-blue-500 text-white px-5 py-3 rounded-xl font-bold text-sm shadow-lg transition flex items-center gap-2"
+          className="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white px-5 py-3 rounded-xl font-bold text-sm shadow-lg flex items-center justify-center gap-2"
         >
           <Plus size={18} /> Novi klijent
         </button>
@@ -198,11 +198,18 @@ export default function Clients() {
               className="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-sm text-slate-100 focus:outline-none focus:border-blue-500"
             />
           </div>
-          <div className="flex justify-end gap-3 pt-4 border-t border-slate-800">
-            <button type="button" onClick={() => setIsModalOpen(false)} className="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl font-medium text-sm">
+          <div className="flex flex-col sm:flex-row justify-end gap-3 pt-4 border-t border-slate-800">
+            <button
+              type="button"
+              onClick={() => setIsModalOpen(false)}
+              className="w-full sm:w-auto px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl font-medium text-sm"
+            >
               Otkaži
             </button>
-            <button type="submit" className="px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold text-sm shadow-lg">
+            <button
+              type="submit"
+              className="w-full sm:w-auto px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold text-sm shadow-lg"
+            >
               {editingId ? 'Sačuvaj' : 'Kreiraj'}
             </button>
           </div>

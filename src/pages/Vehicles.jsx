@@ -94,10 +94,10 @@ export default function Vehicles() {
   if (loading) return <Loading />;
 
   return (
-    <div className="p-8">
-      <div className="flex justify-between items-center mb-6">
+    <div className="p-4 md:p-6 lg:p-8">
+     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
         <div>
-          <h1 className="text-3xl font-bold text-white">Vozila</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-white">Vozila</h1>
           <p className="text-slate-400 mt-1">
             Ukupno: <span className="text-white font-semibold">{filtered.length}</span> od {vehicles.length}
           </p>

@@ -86,10 +86,10 @@ export default function Workers() {
   if (loading) return <Loading />;
 
   return (
-    <div className="p-8">
-      <div className="flex justify-between items-center mb-6">
+    <div className="p-4 md:p-6 lg:p-8">
+     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
         <div>
-          <h1 className="text-3xl font-bold text-white">Radnici</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-white">Radnici</h1>
           <p className="text-slate-400 mt-1">Ukupno: <span className="text-white font-semibold">{filtered.length}</span> od {workers.length}</p>
         </div>
         <button onClick={handleOpenAdd} className="bg-blue-600 hover:bg-blue-500 text-white px-5 py-3 rounded-xl font-bold text-sm shadow-lg flex items-center gap-2">
