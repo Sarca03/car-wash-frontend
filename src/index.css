@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* Svetla tema, ljubičasta (brand-*) je jedina boja akcenta */
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-brand-50: #f3f0ff;
+  --color-brand-100: #e9e3ff;
+  --color-brand-200: #d4c9ff;
+  --color-brand-300: #b3a1ff;
+  --color-brand-400: #8f78ff;
+  --color-brand-500: #7558f5;
+  --color-brand-600: #6342e8;
+  --color-brand-700: #5132cc;
+
+  --color-page: #f4f4f8;
+
+  --radius-lg: 0.625rem;
+  --radius-xl: 0.875rem;
+  --radius-2xl: 1.25rem;
+  --shadow-card: 0 1px 2px rgb(16 24 40 / 0.04), 0 6px 16px -6px rgb(16 24 40 / 0.08);
+  --shadow-lg: 0 6px 16px -6px rgb(99 66 232 / 0.45);
+  --shadow-2xl: 0 24px 48px -12px rgb(16 24 40 / 0.25);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-page);
+  color: var(--color-slate-900);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Bele kartice sa blagom senkom. U sloju components, da hover:border-* radi. */
+@layer components {
+  .card {
+    background: #fff;
+    border: 1px solid #ececf2;
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-card);
+  }
+}
+
+/* Demo nalog sme samo da gleda: sakrij kontrole za izmenu.
+   Server ionako odbija izmene, ovo je da posetilac ne klikće uzalud. */
+.demo-only { display: none; }
+.is-demo .demo-only { display: inline-flex; }
+.is-demo .edit-only { display: none !important; }
+
+/* Brojevi iste širine u tabelama i karticama */
+table,
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Registarske tablice */
+.plate {
+  display: inline-block;
+  padding: 0 0.4rem;
+  border: 1px solid var(--color-slate-300);
+  border-radius: 0.3rem;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 0.72rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.03em;
+  color: var(--color-slate-700);
+  background: #fff;
+  white-space: nowrap;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-slate-300);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-slate-400);
+}
