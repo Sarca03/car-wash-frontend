@@ -1,31 +1,33 @@
-# Auto perionica: frontend
+# Car wash app: frontend
 
-Aplikacija za vlasnika auto perionice: termini, klijenti, vozila, usluge i radnici na jednom mestu.
+An app for a car wash owner: bookings, clients, vehicles, services and staff in one place.
 
-**Uživo:** https://car-wash-bogdan.netlify.app
-Demo: na stranici za prijavu klikni „Pogledaj demo“. Demo nalog može samo da pregleda podatke.
+**Live:** https://car-wash-bogdan.netlify.app
+Demo: on the login page click „Pogledaj demo" (view demo). The demo account can only look at the data.
 
-Backend (Node.js, Express, PostgreSQL) je u posebnom repou: [car-wash-backend](https://github.com/Sarca03/car-wash-backend).
+The app was made for the local market, so the interface is in Serbian.
 
-## Šta radi
+The backend (Node.js, Express, PostgreSQL) is in a separate repo: [car-wash-backend](https://github.com/Sarca03/car-wash-backend).
 
-- **Pregled:** današnji termini po satu, sledeći termin, prihod od završenih termina i raspodela po statusu.
-- **Termini:** zakazivanje, izmena i promena statusa (na čekanju, potvrđen, završen, otkazan). Pri izboru usluge cena se popunjava sama, a vozila se filtriraju po izabranom klijentu.
-- **Klijenti, vozila, usluge, radnici:** dodavanje, izmena, brisanje i pretraga.
-- **Prijava** preko JWT tokena. Token se šalje uz svaki zahtev, a kad istekne (401) korisnik se vraća na prijavu.
-- Na telefonu je donji meni, a tabela termina se prikazuje kao kartice.
+## What it does
 
-## Tehnologije
+- **Dashboard:** today's bookings by hour, the next booking, revenue from completed bookings and a breakdown by status.
+- **Bookings:** create, edit and change status (pending, confirmed, completed, cancelled). Picking a service fills in the price, and vehicles are filtered by the selected client.
+- **Clients, vehicles, services, staff:** add, edit, delete and search.
+- **Login** with a JWT token. The token goes with every request, and when it expires (401) the user is sent back to login.
+- On phones there is a bottom menu, and the bookings table turns into cards.
 
-React 19, React Router, Vite, Tailwind CSS 4, Axios, lucide-react ikonice, react-hot-toast.
+## Stack
 
-## Pokretanje
+React 19, React Router, Vite, Tailwind CSS 4, Axios, lucide-react icons, react-hot-toast.
+
+## Running it
 
 ```bash
 npm install
-npm run dev     # http://localhost:5173, /api ide na lokalni backend
+npm run dev     # http://localhost:5173, /api goes to the local backend
 npm run build
 npm run lint
 ```
 
-Adresa API-ja je u `VITE_API_URL` (`.env.production`). Ako nije zadata, build gađa backend na Render-u.
+The API address is in `VITE_API_URL` (`.env.production`). If it is not set, the build points to the backend on Render.
