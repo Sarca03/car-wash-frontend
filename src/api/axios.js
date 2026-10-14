@@ -8,7 +8,6 @@ const api = axios.create({
   headers: { 'Content-Type': 'application/json' },
 });
 
-// REQUEST: dodaj token ako postoji
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
   if (token) {
@@ -17,7 +16,6 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-// RESPONSE: ako je 401, izloguj korisnika
 api.interceptors.response.use(
   (response) => response,
   (error) => {

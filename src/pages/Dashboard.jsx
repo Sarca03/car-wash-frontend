@@ -57,7 +57,6 @@ export default function Dashboard() {
 
   return (
     <div className="p-4 md:p-6 lg:p-8 max-w-6xl">
-      {/* Zaglavlje */}
       <div className="bg-brand-600 rounded-3xl p-6 md:p-8 mb-6 text-white relative overflow-hidden">
         <svg className="absolute -right-10 -top-10 w-56 h-56 text-white/10" viewBox="0 0 32 32" aria-hidden="true">
           <path d="M16 3c-5 6.4-9 11.6-9 16.4A9 9 0 0 0 16 28.5a9 9 0 0 0 9-9.1C25 14.6 21 9.4 16 3Z" fill="currentColor" />
@@ -72,7 +71,6 @@ export default function Dashboard() {
         </p>
       </div>
 
-      {/* Kartice */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-6">
         {/* Broji iz iste liste kao "Današnji termini", po lokalnom vremenu */}
         <StatCard title="Termini danas" value={today.length} icon={Clock} />
@@ -82,7 +80,6 @@ export default function Dashboard() {
       </div>
 
       <div className="grid lg:grid-cols-3 gap-6">
-        {/* Današnji termini */}
         <section className="card lg:col-span-2 overflow-hidden">
           <div className="flex items-center justify-between px-5 pt-5 pb-3">
             <h2 className="font-bold text-slate-900">Današnji termini</h2>
@@ -112,7 +109,6 @@ export default function Dashboard() {
           )}
         </section>
 
-        {/* Statusi */}
         <section className="card p-5">
           <h2 className="font-bold text-slate-900 mb-4">Termini po statusu</h2>
           <div className="flex h-2.5 rounded-full overflow-hidden bg-slate-100 mb-5">
