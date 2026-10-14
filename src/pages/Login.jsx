@@ -53,7 +53,7 @@ export default function Login() {
           <LogoMark size={44} />
         </div>
         <h1 className="text-2xl font-bold text-white">Auto perionica</h1>
-        <p className="text-brand-100 text-sm mt-1">Termini, klijenti i prihod na jednom mestu</p>
+        <p className="text-brand-100 text-sm mt-1">Prijavi se da vidiš današnje termine.</p>
       </div>
 
       <div className="flex-1 px-4 -mt-20 pb-10">

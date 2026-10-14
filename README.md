@@ -1,6 +1,6 @@
 # Car wash app: frontend
 
-An app for a car wash owner: bookings, clients, vehicles, services and staff in one place.
+An app for a car wash owner. It tracks bookings, clients, vehicles, services and staff.
 
 **Live:** https://car-wash-bogdan.netlify.app
 Demo: on the login page click „Pogledaj demo" (view demo). The demo account can only look at the data.
