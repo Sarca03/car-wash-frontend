@@ -3,7 +3,7 @@
 An app for a car wash owner. It tracks bookings, clients, vehicles, services and staff.
 
 **Live:** https://car-wash-bogdan.netlify.app
-Demo: on the login page click „Pogledaj demo" (view demo). The demo account can only look at the data.
+Demo: on the login page click "Pogledaj demo" (view demo). The demo account can only look at the data.
 
 The app was made for the local market, so the interface is in Serbian.
 
