@@ -19,8 +19,7 @@ export default function Layout() {
 
   return (
     <div className={`flex min-h-screen bg-page ${isDemo ? 'is-demo' : ''}`}>
-      {/* Telefon: gornja traka sa logom */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200/70 px-4 h-14 flex items-center justify-between">
+      <div className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-white border-b border-slate-200/70 px-4 h-14 flex items-center justify-between">
         <Logo size={28} subtitle={false} />
         <button
           onClick={handleLogout}
@@ -31,7 +30,6 @@ export default function Layout() {
         </button>
       </div>
 
-      {/* Desktop: bočni meni */}
       <Sidebar />
 
       <main className="flex-1 min-w-0 overflow-x-auto pt-14 pb-24 lg:pt-0 lg:pb-0">
@@ -46,7 +44,6 @@ export default function Layout() {
         <Outlet />
       </main>
 
-      {/* Telefon: donji meni */}
       <nav
         className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-slate-200/70 px-2 pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] grid grid-cols-6"
         aria-label="Glavni meni"

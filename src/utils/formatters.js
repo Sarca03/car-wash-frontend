@@ -1,4 +1,3 @@
-// Formatiraj datum u lokalni format
 export const formatDate = (dateString) => {
   if (!dateString) return '-';
   const date = new Date(dateString);
@@ -33,7 +32,6 @@ export const toLocalInputValue = (dateString) => {
 // ...a serveru šaljemo ISO sa zonom, da 10:00 ostane 10:00 i posle čuvanja.
 export const fromLocalInputValue = (value) => (value ? new Date(value).toISOString() : value);
 
-// Formatiraj cenu
 export const formatPrice = (price) => {
   if (price === null || price === undefined) return '-';
   return `${Number(price).toLocaleString('sr-RS')} RSD`;
@@ -43,7 +41,7 @@ export const formatPrice = (price) => {
 // a korisniku se prikazuju na srpskom.
 export const STATUSES = ['Pending', 'Confirmed', 'Completed', 'Cancelled'];
 
-export const statusLabels = {
+const statusLabels = {
   Pending: 'Na čekanju',
   Confirmed: 'Potvrđen',
   Completed: 'Završen',

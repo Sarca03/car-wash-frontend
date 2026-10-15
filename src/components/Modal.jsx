@@ -5,7 +5,7 @@ export default function Modal({ isOpen, onClose, title, children, maxWidth = 'ma
 
   return (
     <div
-      className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm flex items-end sm:items-center justify-center sm:p-4 z-50"
+      className="fixed inset-0 bg-slate-900/50 flex items-end sm:items-center justify-center sm:p-4 z-50"
       onClick={onClose}
     >
       <div

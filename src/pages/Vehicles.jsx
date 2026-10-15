@@ -101,7 +101,7 @@ export default function Vehicles() {
         <div>
           <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900">Vozila</h1>
           <p className="text-slate-500 mt-1">
-            Ukupno: <span className="text-slate-900 font-semibold">{filtered.length}</span> od {vehicles.length}
+            Prikazano: <span className="text-slate-900 font-semibold">{filtered.length}</span> od {vehicles.length}
           </p>
         </div>
         <button onClick={handleOpenAdd} className="edit-only bg-brand-600 hover:bg-brand-700 text-white px-5 py-3 rounded-full font-semibold text-sm shadow-lg flex items-center gap-2">

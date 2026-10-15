@@ -26,7 +26,6 @@ export default function Appointments() {
   const [workers, setWorkers] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Filter i pretraga
   const [search, setSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
 
@@ -45,7 +44,6 @@ export default function Appointments() {
     status: 'Pending',
   });
 
-  // Vozila za izabranog klijenta
   const [clientVehicles, setClientVehicles] = useState([]);
 
   const loadData = async () => {
@@ -71,7 +69,6 @@ export default function Appointments() {
     loadData();
   }, []);
 
-  // Kad se promeni klijent, učitaj njegova vozila
   useEffect(() => {
     if (!formData.client_id) {
       setClientVehicles([]);
@@ -112,7 +109,6 @@ export default function Appointments() {
     setIsModalOpen(true);
   };
 
-  // Izbor usluge popunjava cenu
   const handleServiceChange = (serviceId) => {
     const service = services.find((s) => s.service_id == serviceId);
     setFormData({
@@ -189,7 +185,7 @@ export default function Appointments() {
         <div>
           <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900">Termini</h1>
           <p className="text-slate-500 mt-1">
-            Ukupno: <span className="text-slate-900 font-semibold">{filtered.length}</span> od {appointments.length}
+            Prikazano: <span className="text-slate-900 font-semibold">{filtered.length}</span> od {appointments.length}
           </p>
         </div>
         <button
@@ -200,7 +196,6 @@ export default function Appointments() {
         </button>
       </div>
 
-      {/* Filteri */}
       <div className="flex flex-col md:flex-row gap-3 mb-6">
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" size={18} />
@@ -481,7 +476,6 @@ export default function Appointments() {
             </div>
           </div>
 
-          {/* Status (samo pri izmeni) */}
           {editingId && (
             <div>
               <label className="block text-xs uppercase font-semibold text-slate-500 mb-2">

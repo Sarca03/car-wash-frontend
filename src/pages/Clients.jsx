@@ -90,7 +90,7 @@ export default function Clients() {
         <div>
           <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900">Klijenti</h1>
           <p className="text-slate-500 mt-1">
-            Ukupno: <span className="text-slate-900 font-semibold">{filtered.length}</span> od {clients.length}
+            Prikazano: <span className="text-slate-900 font-semibold">{filtered.length}</span> od {clients.length}
           </p>
         </div>
         <button

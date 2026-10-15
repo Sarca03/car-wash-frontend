@@ -97,7 +97,7 @@ export default function Services() {
      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
         <div>
           <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900">Usluge</h1>
-          <p className="text-slate-500 mt-1">Ukupno: <span className="text-slate-900 font-semibold">{filtered.length}</span> od {services.length}</p>
+          <p className="text-slate-500 mt-1">Prikazano: <span className="text-slate-900 font-semibold">{filtered.length}</span> od {services.length}</p>
         </div>
         <button onClick={handleOpenAdd} className="edit-only bg-brand-600 hover:bg-brand-700 text-white px-5 py-3 rounded-full font-semibold text-sm shadow-lg flex items-center gap-2">
           <Plus size={18} /> Nova usluga

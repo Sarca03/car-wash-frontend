@@ -26,9 +26,6 @@ api.interceptors.response.use(
         window.location.href = '/login';
       }
     }
-    const message =
-      error.response?.data?.error || error.message || 'Došlo je do greške';
-    console.error('API greška:', message);
     return Promise.reject(error);
   }
 );
